@@ -7,7 +7,7 @@ st.title("Σύστημα Υποστήριξης Απόφασης για Κίνδ
 
 # Περιγραφή έργου και ομάδα
 st.markdown("""
-### 📝 Project Title:
+### 📝 Τίτλος Έργου:
 **Analysis of Clinical Risk Thresholds During Pregnancy and Development of a Web-Based Decision Support Application**
 
 ---
@@ -40,18 +40,18 @@ Risk thresholds have been derived from statistical analysis. When clinical value
 age = st.slider("Ηλικία", 15, 50, 30)
 systolic = st.slider("Συστολική Πίεση (mmHg)", 30, 200, 120)
 diastolic = st.slider("Διαστολική Πίεση (mmHg)", 10, 160, 80)
-bs = st.slider("Σάκχαρο (mmol/L)", 4.0, 20.0, 7.0)
-hr = st.slider("Καρδιακός Ρυθμός (bpm)", 30, 130, 75)
+bs = st.slider("Σάκχαρο (mmol/L)", 4.0, 25.0, 7.0)
+hr = st.slider("Καρδιακός Ρυθμός (bpm)", 30, 150, 75)
 
 # Εντοπισμός τιμών εκτός ορίων του dataset
 note = ""
-if systolic > 160 or diastolic > 100:
-    note = "⚠️ Σημείωση: Οι τιμές πίεσης που καταχωρήθηκαν υπερβαίνουν το εύρος του αρχικού dataset και η εκτίμηση βασίζεται σε κοινώς αποδεκτές κλινικές κατευθυντήριες οδηγίες."
+if systolic > 160 or diastolic > 100 or bs > 20 or hr > 120 or systolic < 90 or diastolic < 50 or hr < 60:
+    note = "⚠️ Σημείωση: Μία ή περισσότερες τιμές που καταχωρήθηκαν υπερβαίνουν (ή υπολείπονται) των ορίων του αρχικού dataset. Η εκτίμηση βασίζεται σε κοινώς αποδεκμένες ιατρικές κατευθυντήριες οδηγίες και όχι σε εμπειρικά δεδομένα."
 
 # Λογική υποστήριξης απόφασης
 if systolic < 90 or diastolic < 50 or hr < 60:
     level = "🟥 Υψηλή Επιτήρηση"
-elif systolic > 160 or diastolic > 100 or hr > 110:
+elif systolic > 160 or diastolic > 100 or hr > 120 or bs > 20:
     level = "🟥 Υψηλή Επιτήρηση"
 elif bs > 10 and systolic > 120:
     level = "🟥 Υψηλή Επιτήρηση"
