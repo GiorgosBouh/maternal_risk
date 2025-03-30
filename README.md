@@ -1,38 +1,70 @@
-# maternal_risk
-A web-based clinical decision support system for evaluating maternal health risk levels based on vital signs such as blood pressure, blood sugar, heart rate, and temperature. Built with Streamlit for rapid and interpretable assessment. No machine learning required.
 
-# 🩺 Maternal Health Risk Decision Support System
+# 🩺 Maternal Risk Decision Support System
 
 This project provides a lightweight and interpretable **web-based decision support application** for assessing pregnancy-related risk levels based on vital signs.
 
-Developed using **Streamlit**, the application enables healthcare professionals and students to enter basic clinical parameters and receive an instant risk level classification: 🟥 High, 🟧 Moderate, or 🟩 Low.
+Developed using **Streamlit**, the application enables healthcare professionals and students to enter basic clinical parameters and receive an instant risk level classification:  
+🟥 High, 🟧 Moderate, or 🟩 Low.
 
 ---
 
-## 📊 Parameters Used
-- **Systolic Blood Pressure** (mmHg)
-- **Diastolic Blood Pressure** (mmHg)
-- **Blood Sugar (BS)** (mmol/L)
-- **Heart Rate** (bpm)
-- **Body Temperature** (°F)
-- **Age** (Years)
+## 📝 Project Title
+**Analysis of Clinical Risk Thresholds During Pregnancy and Development of a Web-Based Decision Support Application**
 
 ---
 
-## 💡 Methodology
-
-The system uses simple threshold-based rules derived from the [Maternal Health Risk Dataset](https://link.springer.com/chapter/10.1007/978-981-15-2317-5_58), originally published by Ahmed et al. (2020). No machine learning is used, ensuring transparency and ease of interpretation.
-
-Examples of clinical rules:
-- If BS > 10 mmol/L and Systolic BP > 120 mmHg → 🟥 High Risk
-- If BS > 9 or Diastolic BP > 85 → 🟧 Moderate Risk
-- Otherwise → 🟩 Low Risk
+## 👨‍⚕️ Developed by
+**Dr. Georgios Bouchouras**
 
 ---
 
-## 🚀 Try It Online
+## 👥 Team Members
+- Angela Lavntarakou, BSc (Hons) Midwifery  
+- Eleni Samara, BSc (Hons) Midwifery  
+- Georgios Bouchouras, BSc (Hons) Midwifery  
+- Emmanouela Dimoveli, BSc (Hons) Midwifery  
+- Georgios Sofianidis, BSc (Hons) Midwifery
 
-You can deploy this app on **Streamlit Cloud** or run it locally using:
+---
+
+## 📊 Clinical Parameters Used
+- Systolic Blood Pressure (mmHg)
+- Diastolic Blood Pressure (mmHg)
+- Blood Sugar (mmol/L)
+- Heart Rate (bpm)
+- Body Temperature (°F)
+- Age (years)
+
+---
+
+## 🧪 Methodology
+
+This application is based entirely on real clinical data from the **Maternal Health Risk Dataset** (n=1014), published by:
+
+> Ahmed M., Kashem M.A., Rahman M., Khatun S. (2020).  
+> *Review and Analysis of Risk Factor of Maternal Health in Remote Area Using the Internet of Things (IoT).*  
+> In: Kasruddin Nasir A. et al. (eds) **InECCE2019**. *Lecture Notes in Electrical Engineering*, vol 632. Springer, Singapore.
+
+Thresholds such as **BS > 10 mmol/L**, **Systolic BP > 120 mmHg**, and **Diastolic BP > 85 mmHg** were derived from statistical analysis across risk levels in the dataset.
+
+In cases where user inputs exceed the maximum values present in the dataset (e.g., **Systolic BP > 160 mmHg**, **Diastolic BP > 100 mmHg**), the system classifies based on **widely accepted general medical guidelines**, and an advisory note is displayed to reflect this.
+
+---
+
+## 🚀 How to Run
+
+To run locally:
 
 ```bash
+pip install -r requirements.txt
 streamlit run app.py
+```
+
+To deploy online, you can use [https://streamlit.io/cloud](https://streamlit.io/cloud).
+
+---
+
+## 📃 License & Use
+
+This project is intended for educational and academic use. Please cite the original data source if using this work in publications.
+
