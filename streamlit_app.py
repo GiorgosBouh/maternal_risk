@@ -7,7 +7,7 @@ st.title("Σύστημα Υποστήριξης Απόφασης για Κίνδ
 
 # Περιγραφή έργου και ομάδα
 st.markdown("""
-### 📝 Τίτλος:
+### 📝 Project Title:
 **Analysis of Clinical Risk Thresholds During Pregnancy and Development of a Web-Based Decision Support Application**
 
 ---
