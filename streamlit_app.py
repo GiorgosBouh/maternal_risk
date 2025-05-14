@@ -36,6 +36,14 @@ Risk thresholds have been derived from statistical analysis. When clinical value
 ---
 """)
 
+
+---
+
+⚠️ **Disclaimer**
+
+This tool is intended strictly for educational and research purposes. It is not a diagnostic tool and must never replace medical advice. Always consult a qualified healthcare provider for medical concerns.
+""")
+
 # Εισαγωγή τιμών
 age = st.slider("Ηλικία", 15, 50, 30)
 systolic = st.slider("Συστολική Πίεση (mmHg)", 30, 200, 120)
