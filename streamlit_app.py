@@ -37,11 +37,14 @@ Risk thresholds have been derived from statistical analysis. When clinical value
 """)
 
 
+st.markdown("""
 ---
 
 ⚠️ **Disclaimer**
 
 This tool is intended strictly for educational and research purposes. It is not a diagnostic tool and must never replace medical advice. Always consult a qualified healthcare provider for medical concerns.
+
+---
 """)
 
 # Εισαγωγή τιμών
