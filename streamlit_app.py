@@ -12,7 +12,7 @@ st.set_page_config(page_title="Maternal Risk & EACI Dashboard", page_icon="🩺"
 # CONFIG
 # ============================================================
 
-EXCEL_PATH = Path("GiorgosBouh/maternal_risk/hosp-epis-stat-mat-dqanlys-2017-18.xlsx")
+EXCEL_PATH = Path("hosp-epis-stat-mat-dqanlys-2017-18.xlsx")
 
 
 # ============================================================
@@ -240,7 +240,7 @@ def render_eaci_dashboard():
     σε σχέση με το σύνολο των εγκύων με διαθέσιμα δεδομένα booking.
 
     Ο πίνακας και τα γραφήματα βασίζονται στο αρχείο Excel:
-    `GiorgosBouh/maternal_risk/hosp-epis-stat-mat-dqanlys-2017-18.xlsx`
+    `hosp-epis-stat-mat-dqanlys-2017-18.xlsx`
     """)
 
     if not EXCEL_PATH.exists():
